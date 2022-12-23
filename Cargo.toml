@@ -1,0 +1,20 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "versus_league_manager"
+version = "0.1.0"
+edition = "2018"
+license = "MPL-2.0"
+authors = [ "CryptoSnowPrince <topdirector2017@gmail.com>" ]
+description = "Versus Metaverse League Manager"
+
+[dependencies]
+concordium-std = "5.0.0"
+concordium-cis2 = "2.0.0"
+
+[lib]
+crate-type=["cdylib", "rlib"]
+
+[profile.release]
+opt-level = "s"
+codegen-units = 1
